@@ -36,15 +36,23 @@ function formSubmit(event){
                         break;
     }
 
+    console.log(" La paga oraria è : " + payPerHour);
+
     let result = hoursNumber * payPerHour;
+    console.log("Il risultato della moltiplicazione è :" + result)
 
     if (codeControl(discountCode, sconti) == true){
         let sconto = result * 25 / 100;
         result = result - sconto;
+    }else{
+
+        
     }
 
+    document.getElementById("price").innerHTML = result.toFixed(2);
 
-    
+
+
 
 
 
@@ -60,4 +68,13 @@ function formSubmit(event){
 
 function codeControl(code , array){
 
+    const index = array.indexOf(code);
+
+    if (index == -1){ 
+        return false;
+    }else{
+
+        const x = array.splice(index, 1);
+        return true;
+    }
 }

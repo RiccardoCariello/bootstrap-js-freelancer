@@ -115,7 +115,7 @@
           <h2 class="text-center text-uppercase">Want an offer?</h2>
           <!-- TODO: PROGETTARE IL FORM QUI -->
           
-          <form onsubmit="formSubmit()">
+          <form onsubmit="formSubmit(event)">
             <div class="row g-3">
               <div class="col-md-6">
                 <label for="firstName" class="form-label">First Name</label>
@@ -138,10 +138,13 @@
               <div class="col-md-6">
                 <label for="workType" class="form-label">Type of Work</label>
                 <select id="workType" class="form-select">
-                  <option selected>Choose...</option>
-                  <option>...</option>
+                  <option selected>Scegli</option>
+                  <option value="back">BackEnd</option>
+                  <option value="front">FrontEnd</option>
+                  <option value="proj">Project</option>
                 </select>
               </div>
+              
               <div class="col-md-6">
                 <label for="discount" class="form-label">Discount Code</label>
                 <input type="text" class="form-control" id="discount">

@@ -45,11 +45,13 @@ function formSubmit(event){
         let sconto = result * 25 / 100;
         result = result - sconto;
     }else{
-
-        
+        document.getElementById("codeError").innerHTML =`<p> Codice non valido </p>`;
+        document.getElementById("discount").classList.add("text-danger");
     }
 
-    document.getElementById("price").innerHTML = result.toFixed(2);
+    document.getElementById("price").innerHTML =` 
+    <span > ${result.toFixed(2)} </span> €
+    `;
 
 
 

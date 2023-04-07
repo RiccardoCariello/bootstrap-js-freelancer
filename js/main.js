@@ -45,8 +45,9 @@ function formSubmit(event){
         let sconto = result * 25 / 100;
         result = result - sconto;
     }else{
-        document.getElementById("codeError").innerHTML =`<p> Codice non valido </p>`;
         document.getElementById("discount").classList.add("text-danger");
+        document.getElementById("codeError").innerHTML =`<p> Codice non valido </p>`;
+        
     }
 
     document.getElementById("price").innerHTML =` 
